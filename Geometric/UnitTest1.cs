@@ -16,11 +16,37 @@ public class GeometricFiguresTest
 
 
     [Test, TestCaseSource("CircleDividedCases")]
-    public void MultiplySource(int arg1)
+    public void MultiplySourceCircle(int arg1)
     {
         Geometric.CirleTest ct = new Geometric.CirleTest();
-        ct.MultiplySourceTest(arg1);
+        ct.MultiplySourceCircleTest(arg1);
     }
+
+
+    [Test]
+    [TestCase(10, TestName = "SquareLenght")]
+    public void SquareLenght(int arg1)
+    {
+        Geometric.SquareTest st = new Geometric.SquareTest();
+        st.SquareLenghtTest(arg1);
+    }
+
+
+    [Test, TestCaseSource("SquareDividedCases")]
+    public void MultiplySourceSquare(int arg1)
+    {
+        Geometric.SquareTest st = new Geometric.SquareTest();
+        st.MultiplySourceSquareTest(arg1);
+    }
+
+
+    static object[] SquareDividedCases =
+{
+        new object[] { 0  },
+        new object[] { 8 },
+        new object[] { 15 }
+    };
+
 
     static object[] CircleDividedCases =
     {

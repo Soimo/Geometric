@@ -57,7 +57,9 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CirleTest.cs" />
+    <Compile Include="Tests\CirleTest.cs" />
+    <Compile Include="Tests\SquareTest.cs" />
+    <Compile Include="Tests\TriangleTest.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
