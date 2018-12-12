@@ -39,6 +39,21 @@ public class GeometricFiguresTest
         st.MultiplySourceSquareTest(arg1);
     }
 
+    [Test]
+    [TestCase(20, 12, 2, TestName = "TriangleLenght")]
+    public void TriangleLenght(int arg1, int arg2, int arg3)
+    {
+        Geometric.TriangleTest tt = new Geometric.TriangleTest();
+        tt.TriangleLenghtTest(arg1, arg2, arg3);
+    }
+
+
+    [Test, TestCaseSource("TriangleDividedCases")]
+    public void MultiplySourceTriangle(int arg1, int arg2, int arg3)
+    {
+        Geometric.TriangleTest tt = new Geometric.TriangleTest();
+        tt.MultiplySourceTriangleTest(arg1, arg2, arg3);
+    }
 
     static object[] SquareDividedCases =
 {
@@ -50,11 +65,16 @@ public class GeometricFiguresTest
 
     static object[] CircleDividedCases =
     {
-        new object[] {-6 },
+        new object[] { 6 },
         new object[] { 0 },
         new object[] { 5 }
     };
 
-
+    static object[] TriangleDividedCases =
+{
+        new object[] { 6, 5, 7 },
+        new object[] { 0, 12, 17 },
+        new object[] { 5, 9, 13 }
+    };
 
 }
